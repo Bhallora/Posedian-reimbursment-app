@@ -20,7 +20,7 @@ class Nav extends Component {
                             <div className="kx-form__element">
                                 <input className="kx-field kx-field--size-base" id="--63647" type="search" placeholder="Find component" />
                                 <label className="kx-label kx-is-vishidden" htmlFor="--63647">
-                                    Find Component
+                                    Find component
                       </label>
                             </div>
                             {/* BUTTON Component */}
