@@ -1,0 +1,21 @@
+.kx-tree__link__txt {
+    color:#521751;
+    text-decoration:none;
+    font-size:1.2rem;
+    font-family: 'Gayathri', sans-serif;
+    
+}
+.kx-tree__link__txt:hover{
+    color:rgb(11, 179, 170);
+      font-size:20px;
+      font-weight:bold;
+      text-decoration:none;
+     
+  }
+  .kx-tree__link__txt ul{
+   text-decoration: none;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
