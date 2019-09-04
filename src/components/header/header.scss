@@ -1,0 +1,35 @@
+.kx-header__title{
+    font-family: 'Pacifico', cursive;
+    font-size:25px;
+    color:rgb(17, 199, 190);
+    text-decoration-color: none;
+    font-weight:normal;
+}
+
+.kx-header {
+
+    height:54px;
+
+}
+.kx-header__nav-toggle
+{
+    background-color: #1a293e;
+    height: 34px;
+    margin-bottom: 1em
+}
+.kx-hamburger__icon{
+    width:20px;
+}
+.kx-hamburger__icon:hover{
+    color:white;
+}
+.kx-hamburger__inner:hover{
+    color:white;
+}
+.kx-hamburger:hover{
+    color:white;
+
+}
+.kx-header__title:hover{
+    opacity:1;
+}
