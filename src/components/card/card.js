@@ -10,13 +10,15 @@ import TextBox from '../text-box/text-box';
 import './card.scss';
 import { bgcolor } from '../../../node_modules/@material-ui/system';
 
+
 const useStyles = makeStyles({
     card: {
         width: 700,
         maxWidth: 1000,
         minWidth: 475,
 
-        marginLeft: 420,
+
+        marginLeft: 550,
         marginTop: 150
 
     },
@@ -60,9 +62,11 @@ export default function SimpleCard(props) {
                 </ul>
 
             </CardContent>
+
             <CardActions>
                 <Button className={classes.button} size="small">Next</Button>
             </CardActions>
+
         </Card>
     );
 }

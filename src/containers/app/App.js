@@ -12,6 +12,7 @@ import Home from '../../components/home-page/home-page'
 import NewEntry from '../../components/new-entry-page/new-entry-page'
 
 
+
 class App extends Component {
   render() {
     let pageClasses = ["kx-page"];
@@ -32,6 +33,7 @@ class App extends Component {
 
               <Route path="/components/new-entry-page/new-entry-page" component={NewEntry} />
               <Route path='/components/view-application-page/view-application-page' component={ViewApplication} />
+
             </Main>
           </ HashRouter>
         </div>
