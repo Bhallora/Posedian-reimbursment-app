@@ -7,65 +7,90 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 //import { flexbox } from '@material-ui/system';
 import TextBox from '../text-box/text-box';
-//import './card.scss';
-import { bgcolor, flexbox, spacing } from '../../../node_modules/@material-ui/system';
-import { TableRow } from '../../../node_modules/@material-ui/core';
-
-const useStyles = makeStyles({
-    card: {
-        width: 700,
-        maxWidth: 1000,
-        minWidth: 475,
-        height: 350,
-        marginLeft: 420,
-        marginTop: 150
-
-    },
-
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
-    button: {
-        marginLeft: 500,
-        background: '#1a293e',
-        color: 'white'
-
-    },
-
-    content: {
-        marginLeft: 115,
-        marginTop: 30
-
-    },
+import './CardTable.scss';
+import { bgcolor, flexbox, spacing } from '@material-ui/system';
+import { TableRow } from '@material-ui/core';
+import MaterialTableDemo from './Table';
 
 
-})
+
+
+//const useStyles = makeStyles({
+//  card: {
+
+
+// minWidth: 475,
+/*    minHeight: 475,
+    marginLeft: 420,
+    marginTop: 150
+
+},
+
+title: {
+    fontSize: 14,
+},
+pos: {
+    marginBottom: 12,
+},
+button: {
+    marginLeft: 500,
+    background: '#1a293e',
+    color: 'white'
+
+},
+
+content: {
+    marginLeft: 11,
+    marginTop: 30
+
+},
+Table: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+
+},
+ClassContainer: {
+    display: 'flex',
+    width: '100%',
+    height: '100 %',
+},
+ContentTable: {
+    marginright: 45,
+    marginTop: 30,
+
+}*/
+
+
+//})
 
 export default function SimpleCard1(props) {
-    const classes = useStyles();
+    // const classes = useStyles();
 
 
-    return (
-        <Card className={classes.card}>
-            <CardContent className={classes.content}>
+    return (<div className="flex-container">
+        <Card className='card'>
+            <CardContent className='content'>
                 <Typography className="CardTitle" color="textSecondary" gutterBottom>
                     <h1> {props.name} </h1>
                 </Typography>
-                <ul type='none'>
-                    <li>   <TextBox name='Voucher No.' /></li>
-                    <li> <TextBox name="Date" /></li>
+                <ul type='none' className="flex-list">
+                    <li className='flex-list-item'>   <TextBox name='Voucher No.' /></li>
+                    <li className='flex-list-item'>  <TextBox name="Date" /></li>
+                    <li className='flex-list-item'><MaterialTableDemo /></li>
+
                 </ul>
 
             </CardContent>
+
             <CardActions >
 
 
-                <Button className={classes.button} size="small">Submit</Button>
+                <Button className='button' size="small">Submit</Button>
 
             </CardActions>
+
         </Card>
+    </div>
     );
 }
