@@ -1,7 +1,26 @@
-.background-card {
-    width: 700;
-    max-width:1000;
-    min-width: 475;
-    height: 350;
-    margin-left: 250;
+.card {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width:600px;
+    margin-top: 2%;
+    min-height:250px;
+}
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-button{
+     
+    margin:auto;
+    background-color: #1a293e;
+
+   
+
+}
+.flex-button-content{
+    color:white;
+
+  
 }

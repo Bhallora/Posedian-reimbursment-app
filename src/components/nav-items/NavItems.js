@@ -13,8 +13,8 @@ class NavItems extends Component {
                         <ul type='none'>
 
                             <li className="kx-tree__link__txt__list">  <KxIcon icon="box"></KxIcon> <NavLink exact to='/' className="kx-tree__link__txt" >Home</NavLink></li>
-                            <li className="kx-tree__link__txt__list">  <KxIcon icon="box"></KxIcon> <NavLink to='/components/view-application-page/view-application-page' className="kx-tree__link__txt">View Applications</NavLink></li>
-                            <li className="kx-tree__link__txt__list">  <KxIcon icon="box"></KxIcon> <NavLink to='/components/new-entry-page/new-entry-page' className="kx-tree__link__txt">New Entry</NavLink></li>
+                            {/* <li className="kx-tree__link__txt__list">  <KxIcon icon="box"></KxIcon> <NavLink to='/components/view-application-page/view-application-page' className="kx-tree__link__txt">View Applications</NavLink></li>*/}
+                            <li className="kx-tree__link__txt__list">  <KxIcon icon="box"></KxIcon> <NavLink to="/new-entry" className="kx-tree__link__txt">New Entry</NavLink></li>
                             <li className="kx-tree__link__txt__list">  <KxIcon icon="box"></KxIcon><span className="kx-tree__link__txt" >Log Out </span></li>
                         </ul>
                     </HashRouter>

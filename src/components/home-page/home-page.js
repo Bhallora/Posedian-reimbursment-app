@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './home.scss';
+import SaveButton from '../save-button/SaveButton';
+import DeleteButton from '../delete-button/DeleteButton';
+import EditButton from '../edit-button/EditButton';
+
 class Home extends Component {
     render() {
         return (
@@ -7,6 +11,9 @@ class Home extends Component {
 
 
                 <h1 className="Home-content"> Welcome To <span id="logo">PayMe</span> </h1>
+
+                <DeleteButton />
+                <EditButton />
             </div>
 
         );
