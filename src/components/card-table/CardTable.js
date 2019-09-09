@@ -6,11 +6,12 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 //import { flexbox } from '@material-ui/system';
-import TextBox from '../text-box/text-box';
+import TextBox from '../text-box/TextBox';
 import './CardTable.scss';
 import { bgcolor, flexbox, spacing } from '@material-ui/system';
 import { TableRow } from '@material-ui/core';
-import MaterialTableDemo from './Table';
+import ExpenseTable from '../expense-table/ExpenseTable';
+import DatePicker from '../date-box/DateBox';
 
 
 
@@ -69,24 +70,25 @@ export default function SimpleCard1(props) {
 
 
     return (<div className="flex-container">
-        <Card className='card'>
+        <Card className='flex-card'>
             <CardContent className='content'>
                 <Typography className="CardTitle" color="textSecondary" gutterBottom>
                     <h1> {props.name} </h1>
                 </Typography>
                 <ul type='none' className="flex-list">
                     <li className='flex-list-item'>   <TextBox name='Voucher No.' /></li>
-                    <li className='flex-list-item'>  <TextBox name="Date" /></li>
-                    <li className='flex-list-item'><MaterialTableDemo /></li>
-
+                    <li className='flex-list-item'>  <TextBox name="Date" type='date' /></li>
+                  
+                    <li className='flex-list-item'> <DatePicker /></li>
                 </ul>
 
             </CardContent>
 
             <CardActions >
 
-
-                <Button className='button' size="small">Submit</Button>
+                <div className='flex-button'>
+                    <Button className='flex-button-content' size="small"><span className='flex-button-content'>Submit</span></Button>
+                </div>
 
             </CardActions>
 

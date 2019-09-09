@@ -10,6 +10,8 @@ import { toggleSideNav } from '../../actions/page.action'
 import { HashRouter, Route } from 'react-router-dom'
 import Home from '../../components/home-page/home-page'
 import NewEntry from '../../components/new-entry-page/new-entry-page'
+//import SimpleCard1 from '../../components/card-table/CardTable';
+
 
 
 
@@ -31,8 +33,9 @@ class App extends Component {
             <Main page={this.props.page} toggleSideNav={this.props.toggleSideNav}>
               <Route exact path="/" component={Home} />
 
-              <Route path="/components/new-entry-page/new-entry-page" component={NewEntry} />
-              <Route path='/components/view-application-page/view-application-page' component={ViewApplication} />
+              <Route path="/new-entry" component={NewEntry} />
+              {/* <Route path='/components/view-application-page/view-application-page' component={ViewApplication} />
+    <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
 
             </Main>
           </ HashRouter>

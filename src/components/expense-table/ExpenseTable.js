@@ -1,11 +1,11 @@
 import React from 'react';
 import MaterialTable from 'material-table';
-import './Table.css';
+import './expense-table.scss';
 
 
 
 
-export default function MaterialTableDemo() {
+export default function ExpenseTable() {
     const [state, setState] = React.useState({
         columns: [
             { title: 'Serial No.', field: 'serialNumber', type: 'numeric' },

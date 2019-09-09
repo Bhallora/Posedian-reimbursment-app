@@ -40,3 +40,23 @@
       padding:5px;
       align-items: center;
   }
+  .flex-card{
+      display:flex;
+      justify-content: space-around;
+      min-width: 60%;
+
+      margin-top: 2%;
+      flex-direction:column;
+    
+      
+  }
+ .flex-button{
+     
+      margin:auto;
+      background-color: #1a293e;
+     
+
+  }
+  .flex-button-content{
+      color:white;
+  }

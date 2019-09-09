@@ -14,6 +14,11 @@ export default function TextBox(props) {
             className="text-box"
             id="input-with-icon-textfield"
             label={props.name}
+            type={props.type}
+
+
+
+
             InputProps={{
 
 

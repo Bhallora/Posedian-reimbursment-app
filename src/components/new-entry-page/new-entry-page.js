@@ -1,28 +1,47 @@
 import React from 'react';
-import SimpleCard from '../card/card';
-import SimpleCard1 from '../card-table/CardTable';
-import { HashRouter, Route } from 'react-router-dom';
+import KxCard from '../card/card';
+import BasicInfo from '../basic-info/BasicInfo';
 class NewEntry extends React.Component {
     render() {
+        const employee = {
+            basicInfo: {
+
+            }
+        }
+
+        const getStepComponent = (step) => {
+            switch (step) {
+                case 1:
+                    return (<BasicInfo />);
+
+                case 2:
+                // return (<ExpenseDetail />);
+
+                case 3:
+                // return (<BillsImages />);
+
+                default:
+                    return (<BasicInfo />);
+
+            }
+        }
+
+
         return (
 
-            <HashRouter>
-                <div className="display1">
+            <div className="display1">
 
-                    <SimpleCard name="Employee Information" />
-
-
-
+                <KxCard>
+                    {getStepComponent(1)}
+                </KxCard>
 
 
 
 
 
 
-
-
-                </div></HashRouter>
-        )
+            </div>);
     }
 }
+
 export default NewEntry;
