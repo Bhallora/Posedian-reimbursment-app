@@ -1,25 +1,32 @@
-import React, { Component } from 'react'
-import { DropzoneArea } from 'material-ui-dropzone'
+import React, { Component } from 'react';
+import BillsImageUpload from '../bills-image-upload/BillsImageUpload';
+import SaveButton from '../save-button/SaveButton';
+import DeleteButton from '../delete-button/DeleteButton';
+import './upload-bills.scss';
+import SubmitButton from '../submit-button/SubmitButton';
+import PreviousButton from '../prev-button/PreviousButton';
+
+
+
 
 class UploadBills extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            files: []
-        };
-    }
-    handleChange(files) {
-        this.setState({
-            files: files
-        });
-    }
     render() {
         return (
-            <DropzoneArea
-                onChange={this.handleChange.bind(this)}
-            />
-        )
+
+            <form className="flex-upload-bills-form">
+                <BillsImageUpload />
+                <div className="flex-upload-bills-form-button">
+                    <DeleteButton />
+                    <SaveButton />
+                    <SubmitButton />
+                </div>
+
+
+
+            </form>
+
+
+        );
     }
 }
-
 export default UploadBills;

@@ -9,11 +9,11 @@ class Home extends Component {
         return (
             <div className="Home">
 
+                <div className='Title'>
+                    <h1 className="Home-content"> Welcome To <span id="logo">PayMe</span> </h1>
+                </div>
 
-                <h1 className="Home-content"> Welcome To <span id="logo">PayMe</span> </h1>
 
-                <DeleteButton />
-                <EditButton />
             </div>
 
         );

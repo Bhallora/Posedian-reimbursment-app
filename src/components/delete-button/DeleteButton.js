@@ -11,7 +11,14 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
         size: 'small',
         fontSize: 12,
+        backgroundColor: '#ff1744',
+        color: "white",
+        ' &:hover': {
 
+            backgroundColor: '#ff1744',
+
+
+        },
     },
 
     rightIcon: {
@@ -25,7 +32,7 @@ export default function DeleteButton() {
     const classes = useStyles();
     return (
         <div>
-            <Button variant='contained' color='secondary' size='small' className={classes.button}>Delete<DeleteIcon className={clsx(classes.rightIcon, classes.iconSmall)} />
+            <Button variant='contained' color='default' size='small' className={classes.button}>Delete<DeleteIcon className={clsx(classes.rightIcon, classes.iconSmall)} />
             </Button>
         </div>
     )
