@@ -17,7 +17,7 @@ export default function BasicInfo() {
             <div className='flex-basic-info-button'>
                 <EditButton />
                 <SaveButton />
-                <NextButton name="Next" /> </div>
+            </div>
 
         </form>
 
