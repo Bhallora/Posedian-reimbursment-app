@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import EditIcon from '@material-ui/icons/Edit';
 import clsx from 'clsx';
+import { datePickerDefaultProps } from '../../../node_modules/@material-ui/pickers/constants/prop-types';
 
 
 
@@ -26,11 +27,11 @@ const useStyles = makeStyles(theme => ({
         fontSize: 15,
     },
 }));
-export default function EditButton() {
+export default function EditButton(props) {
     const classes = useStyles();
     return (
         <div>
-            <Button variant='contained' color='primary' size='small' className={classes.button}><EditIcon className={clsx(classes.leftIcon, classes.iconSmall)} />Edit
+            <Button variant='contained' color='primary' size='small' className={classes.button} onClick={props.onClick}><EditIcon className={clsx(classes.leftIcon, classes.iconSmall)} />Edit
             </Button>
         </div>
     )

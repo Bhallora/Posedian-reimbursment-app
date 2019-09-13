@@ -9,15 +9,15 @@ import './expense-detail.scss';
 
 export default function ExpenseDetail() {
     return (
-        <div className='flex-expense-detail-1'>
-            <form className='flex-expense-detail'>
+
+        <div className='flex-expense-detail-form'>
             <div className='flex-expense-detail-text-box'>
                 <TextBox name="Voucher No." />
                 <DatePicker /></div>
-                <ExpenseTable />
-                <div className='flex-expense-detail-button'>
+            <ExpenseTable />
+            <div className='flex-expense-detail-button'>
                 <SaveButton /></div>
-            </form>
         </div>
+
     )
 }

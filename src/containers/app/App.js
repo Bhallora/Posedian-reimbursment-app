@@ -34,8 +34,8 @@ class App extends Component {
               <Route exact path="/" component={Home} />
 
               <Route path="/new-entry" component={NewEntry} />
-              {/* <Route path='/components/view-application-page/view-application-page' component={ViewApplication} />
-    <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
+              <Route path="/view-application" component={ViewApplication} />
+              {/* <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
 
             </Main>
           </ HashRouter>

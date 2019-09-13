@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { DropzoneArea } from 'material-ui-dropzone'
 
+
+
 class BillsImageUpload extends Component {
     constructor(props) {
         super(props);
@@ -13,9 +15,10 @@ class BillsImageUpload extends Component {
             files: files
         });
     }
+
     render() {
         return (
-            <DropzoneArea
+            <DropzoneArea className='root'
                 onChange={this.handleChange.bind(this)}
             />
         )

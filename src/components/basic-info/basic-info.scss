@@ -1,16 +1,27 @@
+.flex-basic-info-form{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+   ;
+   
+}
+
 .flex-basic-info{
     display:flex;
     flex-direction:column;
     justify-content:space-around;
+    
+    margin-top: 10px;
 }
-.flex-basic-infor-form{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-}
+
 .flex-basic-info-button{
     display:flex;
     justify-content:center;
     flex-direction: row;
     margin-top:20px;
+   
+}
+#flex-basic-info-name-tag{
+ 
+    
 }
