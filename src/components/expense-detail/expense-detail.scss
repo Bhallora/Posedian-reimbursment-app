@@ -3,6 +3,7 @@
     
     flex-direction: column;
     justify-content: space-around;
+    max-width: 100%;
 
 }
 
@@ -24,4 +25,8 @@
     display:flex;
     justify-content: center;
     margin-top:20px;
+}
+.flex-expense-detail-table{
+    display:flex;
+    max-width:100%;
 }

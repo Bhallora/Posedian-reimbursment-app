@@ -1,12 +1,12 @@
 import React from 'react';
 import TextBox from '../text-box/TextBox';
-import SaveButton from '../save-button/SaveButton';
+//import SaveButton from '../save-button/SaveButton';
 
 import './basic-info.scss';
 import { employee } from '../../dummy-data-object/dummy-data-object';
 
 
-import NameTag from '../name-tag/NameTag';
+//import NameTag from '../name-tag/NameTag';
 
 
 export default function BasicInfo() {
@@ -19,10 +19,10 @@ export default function BasicInfo() {
                 <TextBox name='Name' />
                 <TextBox name='Employee ID' /> </div>
 
-            <div className='flex-basic-info-button'>
+            {/* <div className='flex-basic-info-button'> */}
 
-                <SaveButton />
-            </div>
+                {/* <SaveButton /> */}
+            {/* </div> */}
 
         </div>
     </div>
@@ -40,10 +40,10 @@ export function EditInfo() {
                 <TextBox name='Name' input={employee.name} />
                 <TextBox name='Employee ID' input={employee.employeeCode} /> </div>
 
-            <div className='flex-basic-info-button'>
+            {/* <div className='flex-basic-info-button'> */}
 
-                <SaveButton />
-            </div>
+                {/* <SaveButton /> */}
+            {/* </div> */}
 
         </div>
     </div>

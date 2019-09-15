@@ -8,6 +8,7 @@ import NavigateBefore from '@material-ui/icons/NavigateBefore';
 
 const useStyles = makeStyles(theme => ({
     button: {
+        fontFamily: 'Arsenal, sans-serif',
         margin: theme.spacing(1),
         fontSize: 12,
         backgroundColor: '#1a293e',

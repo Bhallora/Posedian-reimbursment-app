@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './header.scss';
+import LockOpen from '@material-ui/icons/LockOpen';
+import Info from '@material-ui/icons/Info';
 
 class Header extends Component {
     render() {
@@ -25,7 +27,11 @@ class Header extends Component {
                     </a>
                     <div className="kx-header__tools">
                         {/* TODO: log out and other options */}
-                    </div>
+                     {/* <button type="button">About Us<Info></Info></button>  */}
+                     {/* <button type="button">Log in<LockOpen></LockOpen></button>  */}
+                        </div>
+
+                    
                 </header>
             </div>
         )

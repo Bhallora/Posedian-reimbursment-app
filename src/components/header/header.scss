@@ -1,14 +1,14 @@
 .kx-header__title{
     font-family: 'Pacifico', cursive;
     font-size:25px;
-   // color:rgb(17, 199, 190);
+   color:rgb(11, 179, 170);
     text-decoration-color: none;
     font-weight:normal;
 }
 
 .kx-header {
 
-    height:54px;
+    height:56px;
 
 }
 .kx-header__nav-toggle
@@ -20,16 +20,22 @@
 .kx-hamburger__icon{
     width:20px;
 }
-.kx-hamburger__icon:hover{
-    color:white;
-}
-.kx-hamburger__inner:hover{
-    color:white;
-}
-.kx-hamburger:hover{
-    color:white;
+//.kx-hamburger__icon:hover{
+    //color:white;
+//}
+//.kx-hamburger__inner:hover{
+    //color:white;
+//}
+//.kx-hamburger:hover{
+    //color:white;
 
-}
+//}
 .kx-header__title:hover{
     opacity:1;
+}
+.kx-header__tools{
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
 }
