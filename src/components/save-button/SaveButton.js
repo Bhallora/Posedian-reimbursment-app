@@ -11,10 +11,16 @@ const useStyles = makeStyles(theme => ({
     button: {
         margin: theme.spacing(1),
         fontSize: 12,
+        //borderColor: 'black',
+        color:'white',
+        fontFamily: 'Arsenal, sans-serif',
+       
         backgroundColor: '#1a293e',
         ' &:hover': {
             backgroundColor: '#1a293e',
+            color:'white',
         },
+        
     },
 
     leftIcon: {
@@ -30,7 +36,7 @@ export default function SaveButton() {
     const classes = useStyles();
     return (
 
-        <Button variant='contained' color="primary" size='small' className={classes.button}>
+        <Button variant='contained' size='small' className={classes.button}>
             <SaveIcon className={clsx(classes.leftIcon, classes.iconSmall)} /> Save
             </Button>
     );

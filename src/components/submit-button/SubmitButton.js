@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: 12,
         backgroundColor: '#00e676',
         color: "white",
+        fontFamily: 'Arsenal, sans-serif',
         ' &:hover': {
 
             backgroundColor: '#00e676',

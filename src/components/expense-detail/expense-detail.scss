@@ -1,8 +1,9 @@
-.flex-expense-detail{
+.flex-expense-detail-form{
     display:flex;
     
     flex-direction: column;
     justify-content: space-around;
+    max-width: 100%;
 
 }
 
@@ -23,4 +24,9 @@
 .flex-expense-detail-button{
     display:flex;
     justify-content: center;
+    margin-top:20px;
+}
+.flex-expense-detail-table{
+    display:flex;
+    max-width:100%;
 }

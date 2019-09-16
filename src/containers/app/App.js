@@ -4,7 +4,7 @@ import Header from '../../components/header/Header';
 import Nav from '../../components/nav/Nav';
 import Main from '../../components/main/Main';
 //import ConfigApp from '../config-app/ConfigApp';
-import ViewApplication from '../../components/view-application-page/view-application-page'
+import ViewApplication from '../../components/view-applications-page/view-applications-page'
 import { connect } from 'react-redux';
 import { toggleSideNav } from '../../actions/page.action'
 import { HashRouter, Route } from 'react-router-dom'
@@ -34,8 +34,8 @@ class App extends Component {
               <Route exact path="/" component={Home} />
 
               <Route path="/new-entry" component={NewEntry} />
-              {/* <Route path='/components/view-application-page/view-application-page' component={ViewApplication} />
-    <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
+              <Route path="/view-applications" component={ViewApplication} />
+              {/* <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
 
             </Main>
           </ HashRouter>

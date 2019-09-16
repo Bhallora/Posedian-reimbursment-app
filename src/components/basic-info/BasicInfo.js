@@ -1,25 +1,52 @@
 import React from 'react';
 import TextBox from '../text-box/TextBox';
-import SaveButton from '../save-button/SaveButton';
-import EditButton from '../edit-button/EditButton';
+//import SaveButton from '../save-button/SaveButton';
+
 import './basic-info.scss';
-import NextButton from '../next-button/NextButton';
+import { employee } from '../../dummy-data-object/dummy-data-object';
+
+
+//import NameTag from '../name-tag/NameTag';
 
 
 export default function BasicInfo() {
-    return (
-        <form className="flex-basic-info-form">
+    return (<div>
+
+        <div className="flex-basic-info-form">
+
             <div className="flex-basic-info">
 
                 <TextBox name='Name' />
                 <TextBox name='Employee ID' /> </div>
 
-            <div className='flex-basic-info-button'>
-                <EditButton />
-                <SaveButton />
-            </div>
+            {/* <div className='flex-basic-info-button'> */}
 
-        </form>
+                {/* <SaveButton /> */}
+            {/* </div> */}
+
+        </div>
+    </div>
+
+    );
+}
+
+export function EditInfo() {
+    return (<div>
+
+        <div className="flex-basic-info-form">
+
+            <div className="flex-basic-info">
+
+                <TextBox name='Name' input={employee.name} />
+                <TextBox name='Employee ID' input={employee.employeeCode} /> </div>
+
+            {/* <div className='flex-basic-info-button'> */}
+
+                {/* <SaveButton /> */}
+            {/* </div> */}
+
+        </div>
+    </div>
 
     );
 }
