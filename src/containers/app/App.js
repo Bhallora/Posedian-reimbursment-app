@@ -11,6 +11,8 @@ import { HashRouter, Route } from 'react-router-dom'
 import Home from '../../components/home-page/home-page'
 import NewEntry from '../../components/new-entry-page/new-entry-page'
 //import SimpleCard1 from '../../components/card-table/CardTable';
+import ApplicationsView from '../../components/applications-view/ApplicationsView';
+import ApplicationView from '../../components/application-view/ApplicationView';
 
 
 
