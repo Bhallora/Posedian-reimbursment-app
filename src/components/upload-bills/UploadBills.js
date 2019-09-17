@@ -13,7 +13,7 @@ class UploadBills extends Component {
     render() {
         return (
 
-            <form className="flex-upload-bills-form">
+            <div className="flex-upload-bills-form">
                 <BillsImageUpload />
                 <div className="flex-upload-bills-form-button">
                     {/* <DeleteButton /> */}
@@ -23,7 +23,7 @@ class UploadBills extends Component {
 
 
 
-            </form>
+            </div>
 
 
         );

@@ -1,7 +1,13 @@
 #title {
-    text-align: center;
-    font-family: 'Arsenal', sans-serif;
-    font-weight:bold;
+  display:inline-flex;
+  margin-top:1%;
+  margin-bottom:5%;
+  //font-family: 'Gayathri';
+  color:#1a293e;
+  font-size: 40px;
+ // font-weight:bold;
+  margin-left: 0%;
+  font-family: 'Arsenal', sans-serif ;
   }
   
   #flex-table {
@@ -25,7 +31,8 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color:#1a293e;
+    //background-color:#1a293e;
+    background-color: grey;
     color: white;
   }
   .flex-table-container{

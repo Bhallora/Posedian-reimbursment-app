@@ -30,7 +30,7 @@ export default function SubmitButton(props) {
     const classes = useStyles();
     return (
         <div>
-            <Button variant='contained' color='default' size="small" className={classes.button}>Submit<Publish className={clsx(classes.rightIcon, classes.iconSmall)} />
+            <Button variant='contained' onClick={props.onClick} color='default' size="small" className={classes.button}>Submit<Publish className={clsx(classes.rightIcon, classes.iconSmall)} />
             </Button>
         </div>
     );
