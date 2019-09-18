@@ -48,8 +48,8 @@ class NewEntry extends React.Component {
                 case 1:
                     if (this.state.counter % 2 !== 0)
                         return (<BasicInfo />);
-                    else
-                        return (<EditInfo />);
+                //   else
+                //   return (<EditInfo />);
 
 
 
@@ -83,7 +83,7 @@ class NewEntry extends React.Component {
         if (this.state.step === 3) {
             return (
 
-                <form className="display1">
+                <div className="display1">
 
                     <KxCard>
                         <div id='new-entry-page-name-tag'>
@@ -93,7 +93,7 @@ class NewEntry extends React.Component {
                         <div className='new-entry-page-buttons'>
                             <PrevButton onClick={this.handleDecrement} />
                             <SaveButton />
-                            <SubmitButton onClick={() => this.props.createApplication({test: 'hello'})} />
+                            <SubmitButton onClick={() => this.props.createApplication({ test: 'hello' })} />
                         </div>
                     </KxCard>
 
@@ -102,13 +102,13 @@ class NewEntry extends React.Component {
 
 
 
-                </form>);
+                </div>);
         }
         if (this.state.step === 1) {
             return (
 
 
-                <form className="display1">
+                <div className="display1">
 
                     <KxCard>
                         <div id='new-entry-page-name-tag'>
@@ -127,12 +127,12 @@ class NewEntry extends React.Component {
                         {/* <EditButton onClick={this.handleClick} /> */}
 
                     </KxCard>
-                </form>
+                </div>
             );
         }
         else return (
 
-            <form className="display1">
+            <div className="display1">
 
                 <KxCard className='kx-card'>
                     <div id='new-entry-page-name-tag'>
@@ -146,7 +146,7 @@ class NewEntry extends React.Component {
                         <NextButton onClick={this.handleIncrement} />
                     </div>
                 </KxCard>
-            </form>);
+            </div>);
 
 
 

@@ -14,6 +14,8 @@ import NewEntry from '../../components/new-entry-page/new-entry-page'
 import ApplicationsView from '../../components/applications-view/ApplicationsView';
 import ApplicationView from '../../components/application-view/ApplicationView';
 import { createApplication } from '../../actions/create-application.action';
+import WizardForm from '../../components/wizard-form/wizard-complete-form/wizard-complete-form'
+import { formReducer } from 'redux-form'
 
 
 
@@ -36,7 +38,7 @@ class App extends Component {
             <Main page={this.props.page} toggleSideNav={this.props.toggleSideNav}>
               <Route exact path="/" component={Home} />
 
-              <Route path="/new-entry" render={() => <NewEntry createApplication={this.props.createApplication}></NewEntry>} />
+              <Route path="/new-entry" render={() => <WizardForm createApplication={this.props.createApplication}></WizardForm>} />
 
               <Route path="/view-applications" render={(props) => <ViewApplication {...props} applications={this.props.applications} />} />
               {/* <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}

@@ -3,10 +3,9 @@ import { employees } from '../dummy-data-object/dummy-data-object';
 const initialState = employees;
 
 const applicationReducer = (state = initialState, action) => {
-    console.log(employees);
+    console.log(state);
     switch (action.type) {
         case CREATE_APPLICATION:
-            debugger;
             let newState = [...state];
             newState.push({
                 id: 3,
@@ -20,7 +19,7 @@ const applicationReducer = (state = initialState, action) => {
             return newState;
 
         default:
-            return initialState;
+            return state;
     }
 }
 export default applicationReducer;

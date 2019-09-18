@@ -16,7 +16,11 @@ class ViewApplication extends React.Component {
         return (<div className='KxCard-container'>
             <HashRouter>
                 <KxCard className='KxCard-content'>
-                    <Route exact path={`${this.props.match.url}`} component={ApplicationsView} />
+                    <Route exact path={`${this.props.match.url}`} render={(props) => {
+                        console.log(props);
+                        return <ApplicationsView {...this.props} />
+                    }} />
+
                     <Route path={`${this.props.match.url}/:id`} component={ApplicationView} />
                 </KxCard>
             </HashRouter>

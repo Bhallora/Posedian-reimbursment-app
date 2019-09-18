@@ -30,10 +30,10 @@ export default function BasicInfo() {
     );
 }
 
-export function EditInfo() {
+{/*export function EditInfo() {
     return (<div>
 
-        <div className="flex-basic-info-form">
+        // <div className="flex-basic-info-form">
 
             <div className="flex-basic-info">
 
@@ -42,11 +42,11 @@ export function EditInfo() {
 
             {/* <div className='flex-basic-info-button'> */}
 
-            {/* <SaveButton /> */}
-            {/* </div> */}
+{/* <SaveButton /> */ }
+{/* </div> */ }
 
-        </div>
-    </div>
+     //   </div>
+    //</div>
 
-    );
-}
+   // );
+//}

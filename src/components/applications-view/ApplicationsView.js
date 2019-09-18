@@ -6,26 +6,23 @@ import { employees } from '../../dummy-data-object/dummy-data-object';
 class ApplicationsView extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { employees }
-
-
     }
     renderTableHeader() {
-        let header = Object.keys(this.state.employees[0])
+        let header = Object.keys(this.props.applications[0])
         return header.map((key, index) => {
             return <th key={index}>{key.toUpperCase()}</th>
         })
     }
     renderTableData() {
-        return this.state.employees.map((employees, index) => {
+        return this.props.applications.map((application, index) => {
 
             return (
                 <tr key={index}>
 
-                    <td> {employees.name}</td>
-                    <td>{employees.employeeCode}</td>
-                    <td>{employees.voucherNo}</td>
-                    <td>{employees.date}</td>
+                    <td> {application.name}</td>
+                    <td>{application.employeeCode}</td>
+                    <td>{application.voucherNo}</td>
+                    <td>{application.date}</td>
                 </tr>
             )
         })
