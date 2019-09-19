@@ -2,6 +2,8 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from '../validate/validate'
 import renderField from '../render-field/renderField'
+import TextBox from '../../text-box/TextBox'
+import DatePicker from '../../date-box/DateBox'
 
 const renderError = ({ meta: { touched, error } }) =>
     touched && error ? <span>{error}</span> : false
@@ -10,23 +12,29 @@ const WizardFormSecondPage = props => {
     const { handleSubmit, previousPage } = props
     return (
         <form onSubmit={handleSubmit}>
-            <Field name="email" type="email" component={renderField} label="Email" />
+            {/* <Field name="email" type="email" component={renderField} label="Email" />*/}
             <div>
-                <label>Sex</label>
+                <TextBox
+                    name="Voucher No."
+                    type="text"
+                    component={renderField} />
                 <div>
-                    <label>
-                        <Field name="sex" component="input" type="radio" value="male" />{' '}
-                        Male
-          </label>
-                    <label>
+                    <div>
+                        <DatePicker /> </div>
+                    {/* <label> */}
+                    {/* <Field name="sex" component="input" type="radio" value="male" />{' '} */}
+                    {/* Male */}
+                    {/* </label> */}
+                    {/* <label>
                         <Field name="sex" component="input" type="radio" value="female" />{' '}
                         Female
           </label>
                     <label>
                         <Field name="sex" component="input" type="radio" value="other" />{' '}
-                        Other
-          </label>
+                        Other */}
+                    {/* </label>
                     <Field name="sex" component={renderError} />
+                </div> */}
                 </div>
             </div>
             <div>
@@ -38,6 +46,7 @@ const WizardFormSecondPage = props => {
         </button>
             </div>
         </form>
+
     )
 }
 
