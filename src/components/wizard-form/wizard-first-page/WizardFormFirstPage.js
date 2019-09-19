@@ -10,21 +10,23 @@ const WizardFormFirstPage = props => {
   return (
     <form onSubmit={handleSubmit}>
       <TextBox
-        name="Name"
+        name="name"
+        label="Name"
         type="text"
         component={renderField}
       //  label="Name"
       />
       <TextBox
-        name="Employee Code"
+        label="Employee Code"
         type="text"
         component={renderField}
-       // label="Employee Code"
+        // label="Employee Code"
+        name="employeeCode"
       />
       <div>
-        <NextButton className="next"/>
-        
-      
+        <NextButton className="next" />
+
+
       </div>
     </form>
   )
@@ -34,5 +36,5 @@ export default reduxForm({
   form: 'wizard', // <------ same form name
   destroyOnUnmount: false, // <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-  validate
+  validate: validate
 })(WizardFormFirstPage)

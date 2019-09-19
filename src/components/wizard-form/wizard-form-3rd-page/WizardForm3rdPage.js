@@ -42,8 +42,8 @@ const WizardForm3rdPage = props => {
 
                 <Field name="division" component={renderDivisionsSelector} />
                 <Field name="department" component={renderDepartmentSelector} />
-                <TextBox name="Expense Detail" />
-                <TextBox name="Amount" type="numeric" />
+                <TextBox name="expenseDetail" label="Expense Detail" />
+                <TextBox label="Amount" type="numeric" name="amount" />
                 <NextButton className='next' />
                 <PreviousButton onClick={previousPage} className='previous' />
             </div>
@@ -55,5 +55,5 @@ export default reduxForm({
     form: 'wizard', //Form name is same
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-    validate
+    validate: validate
 })(WizardForm3rdPage)

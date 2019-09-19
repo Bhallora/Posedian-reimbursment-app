@@ -4,6 +4,7 @@ import WizardFormFirstPage from '../wizard-first-page/WizardFormFirstPage'
 import WizardFormSecondPage from '../wizard-second-page/WizardFormSecondPage'
 import WizardFormThirdPage from '../wizard-third-page/WizardFormThirdPage'
 import WizardForm3rdPage from '../wizard-form-3rd-page/WizardForm3rdPage'
+import { createApplication } from '../../../actions/create-application.action';
 
 class WizardForm extends Component {
     constructor(props) {
@@ -43,7 +44,7 @@ class WizardForm extends Component {
                 {page === 4 && (
                     <WizardFormThirdPage
                         previousPage={this.previousPage}
-                        onSubmit={onSubmit}
+                        onSubmit={createApplication}
                     />
                 )}
             </div>

@@ -15,7 +15,7 @@ export default function TextBox(props) {
         <TextField
             className="text-box"
             id="input-with-icon-textfield"
-            label={props.name}
+            label={props.label}
             type={props.type}
             value={props.input}
             onChange={props.handleChange}

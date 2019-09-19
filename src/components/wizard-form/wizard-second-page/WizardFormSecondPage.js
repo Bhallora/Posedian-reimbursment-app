@@ -15,7 +15,8 @@ const WizardFormSecondPage = props => {
             {/* <Field name="email" type="email" component={renderField} label="Email" />*/}
             <div>
                 <TextBox
-                    name="Voucher No."
+                    name="voucherNo"
+                    label="Voucher No."
                     type="text"
                     component={renderField} />
                 <div>
@@ -54,5 +55,5 @@ export default reduxForm({
     form: 'wizard', //Form name is same
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-    validate
+    validate:validate
 })(WizardFormSecondPage)
