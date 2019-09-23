@@ -14,7 +14,7 @@ const WizardFormFirstPage = props => {
       <div className="flex-container-page-1">
         <KxCard className="flex-KxCard-page-1">
           <div className="flex-form-content-and-button">
-            <div> <p className="heading">Basic Information </p></div>
+            <div> <p className="heading1">Basic Information </p></div>
 
 
             <TextBox
@@ -33,7 +33,7 @@ const WizardFormFirstPage = props => {
             />
 
             <div className="flex-button-container-page-1">
-              <NextButton className="next" />
+              <NextButton className="next" label="Next" />
 
 
             </div>

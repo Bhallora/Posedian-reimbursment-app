@@ -1,61 +1,78 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from '../validate/validate'
-const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+import NextButton from '../../next-button/NextButton';
+import PrevButton from '../../prev-button/PreviousButton'
+import Filter2Icon from '@material-ui/icons/Filter2';
+import KxCard from '../../card/card';
+import './wizard-form-third-page.scss';
+//import SelectField from ' @material-ui/core/SelectField';
+import TextBox from '../../text-box/TextBox'
+const divisions = ['Digital Platform', 'Oil & Drilling', ' Product & Services']
+const departments = ['Engineering', 'HR', 'Admin', 'Finance', 'IT']
 
-const renderColorSelector = ({ input, meta: { touched, error } }) => (
-  <div>
-    <select {...input}>
-      <option value="">Select a color...</option>
-      {colors.map(val => (
-        <option value={val} key={val}>
-          {val}
-        </option>
-      ))}
-    </select>
-    {touched && error && <span>{error}</span>}
-  </div>
+const renderDivisionsSelector = ({ input, meta: { touched, error } }) => (
+    <div>
+        <select {...input}>
+            <option value="">Division</option>
+            {divisions.map(val => (
+                <option value={val} key={val}>
+                    {val}
+                </option>
+            ))}
+        </select>
+        {touched && error && <span>{error}</span>}
+    </div>
 )
-
+const renderDepartmentSelector = ({ input, meta: { touched, error } }) => (
+    <div>
+        <select {...input}>
+            <option value="">Department</option>
+            {departments.map(val => (
+                <option value={val} key={val}>
+                    {val}
+                </option>
+            ))}
+        </select>
+        {touched && error && <span>{error}</span>}
+    </div>
+)
 const WizardFormThirdPage = props => {
-  const { handleSubmit, pristine, previousPage, submitting } = props
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Favorite Color</label>
-        <Field name="favoriteColor" component={renderColorSelector} />
-      </div>
-      <div>
-        <label htmlFor="employed">Employed</label>
-        <div>
-          <Field
-            name="employed"
-            id="employed"
-            component="input"
-            type="checkbox"
-          />
-        </div>
-      </div>
-      <div>
-        <label>Notes</label>
-        <div>
-          <Field name="notes" component="textarea" placeholder="Notes" />
-        </div>
-      </div>
-      <div>
-        <button type="button" className="previous" onClick={previousPage}>
-          Previous
-        </button>
-        <button type="submit" disabled={pristine || submitting}>
-          Submit
-        </button>
-      </div>
-    </form>
-  )
+    const { handleSubmit, previousPage } = props
+    return (
+        <form onSubmit={handleSubmit}>
+            <div className="flex-container-page-3">
+                <KxCard className="flex-KxCard-page-3">
+                    <div className="flex-form-content-and-button">
+
+                        <div className="previous">  <PrevButton type="button" onClick={previousPage}>
+                        </PrevButton> </div>
+                        <div> <p className="heading3">Expense Details <span id="icon"> <Filter2Icon /></span></p></div>
+
+                        <div className="flex-field-selector">
+
+                            <div className="flex-field-department">   <Field name="department" component={renderDepartmentSelector} /></div>
+                            <div className="flex-field-division">  <Field name="division" component={renderDivisionsSelector} /></div>
+
+                        </div>
+                        <TextBox name="expenseDetail" label="Expense Detail" />
+                        <TextBox label="Amount" type="numeric" name="amount" />
+                        <div className="flex-button-container-page-3">
+                            <NextButton className="next" label="Next" />
+                        </div>
+                    </div>
+                </KxCard>
+
+
+
+            </div>
+        </form>
+    )
 }
+
 export default reduxForm({
-  form: 'wizard', //Form name is same
-  destroyOnUnmount: false,
-  forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-  validate: validate
+    form: 'wizard', //Form name is same
+    destroyOnUnmount: false,
+    forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
+    validate: validate
 })(WizardFormThirdPage)
