@@ -6,15 +6,16 @@ import PrevButton from '../../prev-button/PreviousButton'
 import Filter2Icon from '@material-ui/icons/Filter2';
 import KxCard from '../../card/card';
 import './wizard-form-third-page.scss';
+import DatePicker from "../../date-box/DateBox";
 //import SelectField from ' @material-ui/core/SelectField';
 import TextBox from '../../text-box/TextBox'
 const divisions = ['Digital Platform', 'Oil & Drilling', ' Product & Services']
 const departments = ['Engineering', 'HR', 'Admin', 'Finance', 'IT']
 
 const renderDivisionsSelector = ({ input, meta: { touched, error } }) => (
-    <div>
+    <div className="display-name" >
         <select {...input}>
-            <option value="">Division</option>
+            <option className="display-name" value="">Division</option>
             {divisions.map(val => (
                 <option value={val} key={val}>
                     {val}
@@ -25,7 +26,7 @@ const renderDivisionsSelector = ({ input, meta: { touched, error } }) => (
     </div>
 )
 const renderDepartmentSelector = ({ input, meta: { touched, error } }) => (
-    <div>
+    <div className="display-name" >
         <select {...input}>
             <option value="">Department</option>
             {departments.map(val => (
@@ -55,6 +56,7 @@ const WizardFormThirdPage = props => {
                             <div className="flex-field-division">  <Field name="division" component={renderDivisionsSelector} /></div>
 
                         </div>
+                        <DatePicker name="Expense Date" />
                         <TextBox name="expenseDetail" label="Expense Detail" />
                         <TextBox label="Amount" type="numeric" name="amount" />
                         <div className="flex-button-container-page-3">

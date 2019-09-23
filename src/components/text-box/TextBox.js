@@ -5,15 +5,17 @@ import React from 'react';
 
 //import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
+
 //import Grid from '@material-ui/core/Grid';
 //import AccountCircle from '@material-ui/icons/AccountCircle';
 //import InputAdornment from '@material-ui/core/InputAdornment';
 
-export default function TextBox(props) {
 
+export default function TextBox(props) {
+    
     return (
         <TextField
-            className="text-box"
+            className="text-field"
             id="input-with-icon-textfield"
             label={props.label}
             type={props.type}

@@ -1,54 +1,30 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from '../validate/validate'
-const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+import SubmitButton from '../../submit-button/SubmitButton';
+import PrevButton from '../../prev-button/PreviousButton';
+import KxCard from '../../card/card';
+import './wizard-form-fourth-page.scss';
 
-const renderColorSelector = ({ input, meta: { touched, error } }) => (
-  <div>
-    <select {...input}>
-      <option value="">Select a color...</option>
-      {colors.map(val => (
-        <option value={val} key={val}>
-          {val}
-        </option>
-      ))}
-    </select>
-    {touched && error && <span>{error}</span>}
-  </div>
-)
+
 
 const WizardFormFourthPage = props => {
   const { handleSubmit, pristine, previousPage, submitting } = props
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label>Favorite Color</label>
-        <Field name="favoriteColor" component={renderColorSelector} />
-      </div>
-      <div>
-        <label htmlFor="employed">Employed</label>
-        <div>
-          <Field
-            name="employed"
-            id="employed"
-            component="input"
-            type="checkbox"
-          />
-        </div>
-      </div>
-      <div>
-        <label>Notes</label>
-        <div>
-          <Field name="notes" component="textarea" placeholder="Notes" />
-        </div>
-      </div>
-      <div>
-        <button type="button" className="previous" onClick={previousPage}>
-          Previous
-        </button>
-        <button type="submit" disabled={pristine || submitting}>
-          Submit
-        </button>
+      <div className="flex-container-page-4">
+        <KxCard className="flex-KxCard-page-4">
+          <div className="flex-form-content-and-button">
+            <div className="previous">  <PrevButton type="button" onClick={previousPage}>
+            </PrevButton> </div>
+            <div> <p className="heading4">Upload Bills</p></div>
+            <div className="flex-button-container-page-3">
+              <SubmitButton type="submit" disabled={pristine || submitting} />
+            </div>
+          </div>
+        </KxCard>
+
+
       </div>
     </form>
   )
