@@ -1,14 +1,14 @@
 import React from 'react';
 import './applications-view.scss';
 import { HashRouter, NavLink } from 'react-router-dom';
-import { employees } from '../../data-object/data-object';
+import { employees, employee1 } from '../../data-object/data-object';
 
 class ApplicationsView extends React.Component {
     constructor(props) {
         super(props)
     }
     renderTableHeader() {
-        let header = Object.keys(this.props.applications[0])
+        let header = Object.keys(employee1)
         return header.map((key, index) => {
             return <th key={index}>{key.toUpperCase()}</th>
         })
@@ -16,14 +16,15 @@ class ApplicationsView extends React.Component {
     renderTableData() {
         return this.props.applications.map((application, index) => {
 
-            return (
+            return (<HashRouter>
                 <tr key={index}>
 
-                    <td> {application.name}</td>
+                    <td> <NavLink to={`${this.props.match.url}/:key`}>{application.name}</NavLink ></td>
                     <td>{application.employeeCode}</td>
-                    <td>{application.voucherNo}</td>
+                    {/* <td>{application.voucherNo}</td> */}
                     <td>{application.date}</td>
                 </tr>
+            </HashRouter>
             )
         })
 

@@ -1,7 +1,7 @@
 #title {
   display:inline-flex;
   margin-top:1%;
-  margin-bottom:5%;
+  margin-bottom:10%;
   //font-family: 'Gayathri';
   color:#1a293e;
   font-size: 40px;
@@ -21,6 +21,7 @@
   #flex-table td, #flex-table th {
     border: 1px solid #ddd;
     padding: 8px;
+    font-family: 'Arsenal', sans-serif ;
   }
   
  // #flex-table tr:nth-child(even){background-color: #f2f2f2;}
@@ -34,6 +35,7 @@
     //background-color:#1a293e;
     background-color: grey;
     color: white;
+    font-family: 'Arsenal', sans-serif ;
   }
   .flex-table-container{
       display:flex;

@@ -1,23 +1,35 @@
 export const employee1 = {
-    id: 1,
+
     name: "Pallab",
-    employeeCode: "114576",
-    voucherNo: "8792ef4",
+    ID: "114576",
+    //  voucherNo: "8792ef4",
     date: "06-02-2019",
 };
 
 export const employees = [{
     //id: 1,
+    key: 0,
     name: "Pallab",
     employeeCode: "114576",
     voucherNo: "8792ef4",
     date: "06-02-2019",
+    department: "",
+    division: "",
+    expenseDate: "",
+    expenseDetail: "",
+    amount: ""
+
 }, {
-    id: 2,
+    key: 1,
     name: "Rituporna",
     employeeCode: "114578",
     voucherNo: "8792eg6",
     date: "05-09-2019",
+    department: "",
+    division: "",
+    expenseDate: "",
+    expenseDetail: "",
+    amount: ""
 }];
 {/*  table: [
         {
