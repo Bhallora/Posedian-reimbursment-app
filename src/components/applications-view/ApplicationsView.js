@@ -1,7 +1,7 @@
 import React from 'react';
 import './applications-view.scss';
 import { HashRouter, NavLink } from 'react-router-dom';
-import { employees } from '../../dummy-data-object/dummy-data-object';
+import { employees } from '../../data-object/data-object';
 
 class ApplicationsView extends React.Component {
     constructor(props) {

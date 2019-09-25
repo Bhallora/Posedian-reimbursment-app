@@ -1,5 +1,5 @@
 import { CREATE_APPLICATION, DELETE_APPLICATION } from "../constants/action-types";
-import { employees } from '../dummy-data-object/dummy-data-object';
+import { employees } from '../data-object/data-object';
 const initialState = employees;
 
 const applicationReducer = (state = initialState, action) => {

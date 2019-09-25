@@ -1,6 +1,6 @@
 import React from 'react';
 import EditButton from '../edit-button/EditButton';
-import { employee1 } from '../../dummy-data-object/dummy-data-object';
+import { employee1 } from '../../data-object/data-object';
 import TextBox from '../text-box/TextBox';
 //import KxCard from '../card/card';
 //import { DatePicker } from '../../../node_modules/@material-ui/pickers/DatePicker/DatePicker';

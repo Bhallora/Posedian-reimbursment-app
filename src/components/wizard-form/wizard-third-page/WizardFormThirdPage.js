@@ -9,7 +9,7 @@ import './wizard-form-third-page.scss';
 import DatePicker from "../../date-box/DateBox";
 //import SelectField from ' @material-ui/core/SelectField';
 import TextBox from '../../text-box/TextBox'
-const divisions = ['Digital Platform', 'Oil & Drilling', ' Product & Services']
+const divisions = ['Digital Platform', 'Oil & Drilling', ' Product & Services', 'Other']
 const departments = ['Engineering', 'HR', 'Admin', 'Finance', 'IT']
 
 const renderDivisionsSelector = ({ input, meta: { touched, error } }) => (

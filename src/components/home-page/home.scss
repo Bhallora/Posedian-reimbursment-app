@@ -67,3 +67,26 @@
     margin-left:6px;
     margin-right:6px;
 }
+.kx-tree__link__txt__home{
+    color: rgb(11, 179, 170);
+    text-decoration:none;
+    font-size:1.2rem;
+    font-family: 'Gayathri', sans-serif;
+   align-content: center;
+ //border:2px dotted green;
+ align-items: center;
+ background-color: #1a293e;
+
+   padding-top:5px;
+   padding-left:20px;
+   padding-right:20px;
+ 
+    
+}
+.kx-tree__link__txt__home:hover{
+    color:rgb(11, 179, 170);
+      font-size:20px;
+      font-weight:bold;
+      text-decoration:none;
+     
+  }

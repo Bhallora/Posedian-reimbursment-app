@@ -3,7 +3,7 @@ import TextBox from '../text-box/TextBox';
 //import SaveButton from '../save-button/SaveButton';
 
 import './basic-info.scss';
-import { employee1 } from '../../dummy-data-object/dummy-data-object';
+import { employee1 } from '../../data-object/data-object';
 
 
 //import NameTag from '../name-tag/NameTag';
