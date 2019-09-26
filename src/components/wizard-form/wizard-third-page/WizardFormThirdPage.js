@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate from '../validate/validate'
+//import validate from '../validate/validate'
 import NextButton from '../../next-button/NextButton';
 import PrevButton from '../../prev-button/PreviousButton'
 import Filter2Icon from '@material-ui/icons/Filter2';
@@ -8,9 +8,40 @@ import KxCard from '../../card/card';
 import './wizard-form-third-page.scss';
 import DatePicker from "../../date-box/DateBox";
 //import SelectField from ' @material-ui/core/SelectField';
-import TextBox from '../../text-box/TextBox'
+//import TextBox from '../../text-box/TextBox'
+import TextField from '@material-ui/core/TextField';
+//import FormControl from '@material-ui/core/FormControl'
 const divisions = ['Digital Platform', 'Oil & Drilling', ' Product & Services', 'Other']
 const departments = ['Engineering', 'HR', 'Admin', 'Finance', 'IT']
+
+const validate = values => {
+    const errors = {}
+    const requiredFields = [
+        'expenseDetail',
+        'amount',
+    ]
+    requiredFields.forEach(field => {
+        if (!values[field]) {
+            errors[field] = 'Required'
+        }
+    });
+    return errors;
+}
+const renderTextField = ({
+    label,
+    input,
+    meta: { touched, invalid, error },
+    ...custom
+}) => (
+        <TextField
+            label={label}
+            placeholder={label}
+            error={touched && invalid}
+            helperText={touched && error}
+            {...input}
+            {...custom}
+        />
+    )
 
 const renderDivisionsSelector = ({ input, meta: { touched, error } }) => (
     <div className="display-name" >
@@ -57,8 +88,15 @@ const WizardFormThirdPage = props => {
 
                         </div>
                         <DatePicker name="Expense Date" />
-                        <TextBox name="expenseDetail" label="Expense Detail" />
-                        <TextBox label="Amount" type="numeric" name="amount" />
+                        {/*  <TextBox name="expenseDetail" label="Expense Detail" />
+                        <TextBox label="Amount" type="numeric" name="amount" />*/}
+                        <div>
+                            <Field name="expenseDetail" component={renderTextField} label="Expense Detail" />
+                        </div>
+
+                        <div>
+                            <Field name="amount" component={renderTextField} label="Amount" />
+                        </div>
                         <div className="flex-button-container-page-3">
                             <NextButton className="next" label="Next" />
                         </div>
@@ -76,5 +114,5 @@ export default reduxForm({
     form: 'wizard', //Form name is same
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-    validate: validate
+    validate
 })(WizardFormThirdPage)
