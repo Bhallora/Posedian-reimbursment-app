@@ -1,18 +1,45 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate from '../validate/validate'
-import renderField from '../render-field/renderField'
-import TextBox from '../../text-box/TextBox'
+//import validate from '../validate/validate'
+//import renderField from '../render-field/renderField'
+//import TextBox from '../../text-box/TextBox'
 import DatePicker from '../../date-box/DateBox'
 import PrevButton from '../../prev-button/PreviousButton';
 import NextButton from '../../next-button/NextButton';
 import KxCard from '../../card/card';
 import './wizard-form-second-page.scss';
 import Filter1Icon from '@material-ui/icons/Filter1';
+import { TextField } from '@material-ui/core';
+
+const validate = values => {
+    const errors = {}
+    const requiredFields = [
+        'voucherNo',
+
+    ]
+    requiredFields.forEach(field => {
+        if (!values[field]) {
+            errors[field] = 'Required'
+        }
+    }); return errors
+}
+const renderTextField = ({
+    label,
+    input,
+    meta: { touched, invalid, error },
+    ...custom
+}) => (<TextField
+    label={label}
+    placeholder={label}
+    error={touched && invalid}
+    helperText={touched && error}
+    {...input}
+    {...custom}
+/>)
 
 
-const renderError = ({ meta: { touched, error } }) =>
-    touched && error ? <span>{error}</span> : false
+//const renderError = ({ meta: { touched, error } }) =>
+// touched && error ? <span>{error}</span> : false
 
 const WizardFormSecondPage = props => {
     const { handleSubmit, previousPage } = props
@@ -23,16 +50,22 @@ const WizardFormSecondPage = props => {
 
                     <div className="flex-form-content-and-button">
                         {/* <Field name="email" type="email" component={renderField} label="Email" />*/}
-                        <div className="previous">  <PrevButton type="button" onClick={previousPage}>
-                        </PrevButton> </div>            <div> <p className="heading2">Expense Details <span id="icon"> <Filter1Icon /></span></p></div>
+                        {/* <div className="previous">  
+                        </PrevButton> </div>*/}            <div> <p className="heading2">Expense Details <span id="icon"> <Filter1Icon /></span></p></div>
 
 
 
-                        <TextBox
+                        {/*  <TextBox
                             name="voucherNo"
                             label="Voucher No."
                             type="text"
-                            component={renderField} />
+                      component={renderField} />*/}
+
+                        <Field
+                            name="voucherNo"
+                            component={renderTextField}
+                            label="Voucher No."
+                        />
 
 
                         <DatePicker name="Date of  filing" />
@@ -53,10 +86,9 @@ const WizardFormSecondPage = props => {
 
 
                         <div className="flex-button-container-page-2">
+                            <PrevButton type="button" onClick={previousPage} />
+                            <NextButton className="next" label="Part 2" />
 
-                            <NextButton className="next" label="Part 2">
-
-                            </NextButton>
 
                         </div>
                     </div>

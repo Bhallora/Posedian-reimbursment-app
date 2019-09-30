@@ -1,7 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 //import validate from '../validate/validate'
-import renderField from '../render-field/renderField'
+//import renderField from '../render-field/renderField'
 //import TextBox from '../../text-box/TextBox';
 import NextButton from '../../next-button/NextButton';
 import './wizard-form-first-page.scss';
@@ -12,7 +12,7 @@ import { TextField } from '@material-ui/core';
 const validate = values => {
   const errors = {}
   const requiredFields = [
-    'firstName',
+    'name',
     'employeeCode'
   ]
   requiredFields.forEach(field => {
@@ -62,9 +62,9 @@ const WizardFormFirstPage = props => {
             <div> <p className="heading1">Basic Information </p></div>
             <div>
               <Field
-                name="firstName"
+                name="name"
                 component={renderTextField}
-                label="First Name"
+                label="Name"
               />
             </div>
             <div>

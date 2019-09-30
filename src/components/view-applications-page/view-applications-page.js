@@ -4,6 +4,7 @@ import ApplicationsView from '../applications-view/ApplicationsView';
 import './view-applications-page.scss';
 import { Route, HashRouter } from 'react-router-dom';
 import ApplicationView from '../application-view/ApplicationView';
+//import ApplicationView1 from '../application-view/ApplicationView1';
 
 
 

@@ -77,8 +77,8 @@ const WizardFormThirdPage = props => {
                 <KxCard className="flex-KxCard-page-3">
                     <div className="flex-form-content-and-button">
 
-                        <div className="previous">  <PrevButton type="button" onClick={previousPage}>
-                        </PrevButton> </div>
+                        {/* <div className="previous"> 
+                        </PrevButton> </div>*/}
                         <div> <p className="heading3">Expense Details <span id="icon"> <Filter2Icon /></span></p></div>
 
                         <div className="flex-field-selector">
@@ -90,14 +90,15 @@ const WizardFormThirdPage = props => {
                         <DatePicker name="Expense Date" />
                         {/*  <TextBox name="expenseDetail" label="Expense Detail" />
                         <TextBox label="Amount" type="numeric" name="amount" />*/}
-                        <div>
-                            <Field name="expenseDetail" component={renderTextField} label="Expense Detail" />
-                        </div>
 
-                        <div>
-                            <Field name="amount" component={renderTextField} label="Amount" />
-                        </div>
+                        <Field name="expenseDetail" component={renderTextField} label="Expense Detail" />
+
+
+
+                        <Field name="amount" component={renderTextField} label="Amount" />
+
                         <div className="flex-button-container-page-3">
+                            <PrevButton type="button" onClick={previousPage} />
                             <NextButton className="next" label="Next" />
                         </div>
                     </div>

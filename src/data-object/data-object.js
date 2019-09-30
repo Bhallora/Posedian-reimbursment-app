@@ -9,27 +9,39 @@ export const employee1 = {
 export const employees = [{
     //id: 1,
     key: 0,
-    name: "Pallab",
-    employeeCode: "114576",
+    name: "Bhallora",
+    employeeCode: "114586",
     voucherNo: "8792ef4",
-    date: "06-02-2019",
-    department: "",
-    division: "",
-    expenseDate: "",
-    expenseDetail: "",
-    amount: ""
+    date: "08-02-2020",
+    department: "Engineering",
+    division: "digital-platform",
+    expenseDate: "06-02-2020",
+    expenseDetail: "Accomodation and food",
+    amount: "7500"
 
 }, {
     key: 1,
-    name: "Rituporna",
-    employeeCode: "114578",
-    voucherNo: "8792eg6",
-    date: "05-09-2019",
-    department: "",
-    division: "",
-    expenseDate: "",
-    expenseDetail: "",
-    amount: ""
+    name: "PyareMohan",
+    employeeCode: "114592",
+    voucherNo: "8792ez2",
+    date: "08-02-2020",
+    department: "Engineering",
+    division: "digital-platform",
+    expenseDate: "06-02-2020",
+    expenseDetail: "JS conference",
+    amount: "8000"
+},
+{
+    key: 1,
+    name: "Pallabi",
+    employeeCode: "114556",
+    voucherNo: "8792eg2",
+    date: "08-02-2020",
+    department: "Engineering",
+    division: "digital-platform",
+    expenseDate: "06-02-2020",
+    expenseDetail: "JS conference",
+    amount: "8000"
 }];
 {/*  table: [
         {

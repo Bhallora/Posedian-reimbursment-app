@@ -1,24 +1,29 @@
 import React from 'react';
 import EditButton from '../edit-button/EditButton';
-import { employees } from '../../data-object/data-object';
+import { employees, employee1 } from '../../data-object/data-object';
 import TextBox from '../text-box/TextBox';
+import './application-view.scss';
+import image from '../../data-object/hotel-bill-format-in-india-7.jpg'
 //import KxCard from '../card/card';
 //import { DatePicker } from '../../../node_modules/@material-ui/pickers/DatePicker/DatePicker';
-function ApplicationView(index) {
+function ApplicationView(props) {
 
     return (
 
-        <div className="flex-application-container">
+        <div className="flex-application-container-noneditable">
 
             <h1 className="flex-application-summary-header"> Application Summary </h1>
-            <TextBox label="Name" input={employees.name} />
-            <TextBox label="Employee Code" input={employees.employeeCode} />
-            <TextBox label="Voucher No." input={employees.voucherNo} />
-            <TextBox label="Date of filing" input={employees.date} />
-            <TextBox label="Department" input={employees.department} />
-            <TextBox label="Division" input={employees.division} />
-            <TextBox label="Expense Date" input={employees.expenseDate} />
-            <TextBox label="Expense Amount" input={employees.expenseAmount} />
+            <TextBox disabled label="Name" input={employees[0].name} />
+            <TextBox disabled label="Employee Code" input={employees[0].employeeCode} />
+            <TextBox disabled label="Voucher No." input={employees[0].voucherNo} />
+            <TextBox disabled label="Date of filing" input={employees[0].date} />
+            <TextBox disabled label="Department" input={employees[0].department} />
+            <TextBox disabled label="Division" input={employees[0].division} />
+            <TextBox disabled label="Expense Date" input={employees[0].expenseDate} />
+            <TextBox disabled label="Expense Date" input={employees[0].expenseDetail} />
+            <TextBox disabled label="Expense Amount" input={employees[0].amount} />
+
+            <img src={image} width="500px" height="780px" label="Bill Image" />
 
             <EditButton />
 
