@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './header.scss';
+
+import Avatar from 'react-avatar';
+import image from '../../data-object/pallab-ok-1.jpg';
 import LockOpen from '@material-ui/icons/LockOpen';
 import Info from '@material-ui/icons/Info';
 
@@ -27,11 +30,14 @@ class Header extends Component {
                     </a>
                     <div className="kx-header__tools">
                         {/* TODO: log out and other options */}
-                     {/* <button type="button">About Us<Info></Info></button>  */}
-                     {/* <button type="button">Log in<LockOpen></LockOpen></button>  */}
-                        </div>
+                        {/* <button type="button">About Us<Info></Info></button>  */}
+                        {/* <button type="button">Log in<LockOpen></LockOpen></button>  */}
+                        <Avatar src={image} size="30" round={true} />
 
-                    
+
+                    </div>
+
+
                 </header>
             </div>
         )
