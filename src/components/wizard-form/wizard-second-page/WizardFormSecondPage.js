@@ -3,7 +3,8 @@ import { Field, reduxForm } from 'redux-form'
 //import validate from '../validate/validate'
 //import renderField from '../render-field/renderField'
 //import TextBox from '../../text-box/TextBox'
-import DatePicker from '../../date-box/DateBox'
+//import DatePicker from '../../date-box/DateBox'
+import DatePickerComponent from '../../date-box/DatePicker';
 import PrevButton from '../../prev-button/PreviousButton';
 import NextButton from '../../next-button/NextButton';
 import KxCard from '../../card/card';
@@ -36,6 +37,20 @@ const renderTextField = ({
     {...input}
     {...custom}
 />)
+// const renderDateField = ({ label, input }) => (<div><DatePicker label={label} {...input} /></div>)
+
+const renderDatePicker = () => (
+    
+        <div>
+            <label> Date of Filing </label>
+            <div>   <DatePickerComponent   /> </div>
+        </div>
+
+);
+
+
+
+
 
 
 //const renderError = ({ meta: { touched, error } }) =>
@@ -67,8 +82,8 @@ const WizardFormSecondPage = props => {
                             label="Voucher No."
                         />
 
-
-                        <DatePicker name="Date of  filing" />
+                        <Field name="date" component={renderDatePicker} />
+                        {/* <Field name="date" component={renderDateField} label="Date of Filing" /> */}
                         {/* <label> */}
                         {/* <Field name="sex" component="input" type="radio" value="male" />{' '} */}
                         {/* Male */}

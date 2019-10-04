@@ -17,8 +17,8 @@ export default function DatePicker(props) {
         <KeyboardDatePicker
             margin="normal"
             id="date-picker-dialog"
-            label={props.name}
-            format="MM/dd/yyyy"
+            label={props.label}
+            format="dd/MM/yyyy"
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{

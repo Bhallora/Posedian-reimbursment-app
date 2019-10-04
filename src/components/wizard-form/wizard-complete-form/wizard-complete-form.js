@@ -44,7 +44,7 @@ class WizardForm extends Component {
                 {page === 4 && (
                     <WizardFormFourthPage
                         previousPage={this.previousPage}
-                        onSubmit={createApplication}
+                        onSubmit={onSubmit}
                     />
                 )}
             </div>

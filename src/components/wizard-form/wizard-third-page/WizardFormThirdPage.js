@@ -42,6 +42,7 @@ const renderTextField = ({
             {...custom}
         />
     )
+const renderDateField = ({ label }) => (<DatePicker label={label} />)
 
 const renderDivisionsSelector = ({ input, meta: { touched, error } }) => (
     <div className="display-name" >
@@ -87,7 +88,7 @@ const WizardFormThirdPage = props => {
                             <div className="flex-field-division">  <Field name="division" component={renderDivisionsSelector} /></div>
 
                         </div>
-                        <DatePicker name="Expense Date" />
+                        <Field name="expenseDate" component={renderDateField} label="Date of Expense" />
                         {/*  <TextBox name="expenseDetail" label="Expense Detail" />
                         <TextBox label="Amount" type="numeric" name="amount" />*/}
 

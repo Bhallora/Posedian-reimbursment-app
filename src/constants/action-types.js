@@ -1,6 +1,6 @@
 export const FETCH_POSTS = "FETCH_POSTS";
 export const NEW_POST = 'NEW_POST';
-
+export const FETCH_POST = "FETCH_POST";
 export const NEW_OPERATION = 'NEW_OPERATION';
 
 export const TOGGLE_SIDE_NAV = 'TOGGLE_SIDE_NAV;'

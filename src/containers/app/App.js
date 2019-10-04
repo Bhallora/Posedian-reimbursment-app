@@ -39,7 +39,7 @@ class App extends Component {
             <Main page={this.props.page} toggleSideNav={this.props.toggleSideNav}>
               <Route exact path="/" component={Home} />
 
-              <Route path="/new-entry" render={(props) => <WizardForm /*{...props} createApplication={this.props.createApplication}*/ onSubmit={showResults}></WizardForm>} />
+              <Route path="/new-entry" render={() => <WizardForm /*{...props} createApplication={this.props.createApplication}*/ onSubmit={showResults} />} />
 
               <Route path="/view-applications" render={(props) => <ViewApplication {...props} applications={this.props.applications} />} />
               {/* <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
