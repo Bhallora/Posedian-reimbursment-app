@@ -20,7 +20,7 @@ class ApplicationView extends React.Component {
                 <h1 className="flex-application-summary-header"> Application Summary </h1>
                 {/* {this.props.error && <p>{this.props.error}</p>} */}
 
-                <TextBox disabled label="Name" input={this.props.data || this.props.data.name} />
+                {/* <TextBox disabled label="Name" input={this.props.data || this.props.data.name} />
                 <TextBox disabled label="Employee Code" input={this.props.data.employeeCode} />
                 <TextBox disabled label="Voucher No." input={this.props.data.voucherNo} />
                 <TextBox disabled label="Date of filing" input={this.props.data.date} />
@@ -28,7 +28,17 @@ class ApplicationView extends React.Component {
                 <TextBox disabled label="Division" input={this.props.data.division} />
                 <TextBox disabled label="Expense Date" input={this.props.data.expenseDate} />
                 <TextBox disabled label="Expense Date" input={this.props.data.expenseDetail} />
-                <TextBox disabled label="Expense Amount" input={this.props.data.amount} />
+                <TextBox disabled label="Expense Amount" input={this.props.data.amount} /> */}
+                <TextBox disabled label="Name" input={employees[0].name} />
+                <TextBox disabled label="Employee Code" input={employees[0].employeeCode} />
+                <TextBox disabled label="Voucher No." input={employees[0].voucherNo} />
+                <TextBox disabled label="Date of filing" input={employees[0].date} />
+                <TextBox disabled label="Department" input={employees[0].department} />
+                <TextBox disabled label="Division" input={employees[0].division} />
+                <TextBox disabled label="Expense Date" input={employees[0].expenseDate} />
+                <TextBox disabled label="Expense Date" input={employees[0].expenseDetail} />
+                <TextBox disabled label="Expense Amount" input={employees[0].amount} />
+
 
                 <img src={image} width="500px" height="780px" label="Bill Image" />
 
