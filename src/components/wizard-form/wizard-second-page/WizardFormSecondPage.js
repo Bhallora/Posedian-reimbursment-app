@@ -4,13 +4,17 @@ import { Field, reduxForm } from 'redux-form'
 //import renderField from '../render-field/renderField'
 //import TextBox from '../../text-box/TextBox'
 //import DatePicker from '../../date-box/DateBox'
-import DatePickerComponent from '../../date-box/DatePicker';
+import DatePicker, { formatDates, normalizeDates } from '../../date-box/DatePicker';
 import PrevButton from '../../prev-button/PreviousButton';
 import NextButton from '../../next-button/NextButton';
 import KxCard from '../../card/card';
 import './wizard-form-second-page.scss';
 import Filter1Icon from '@material-ui/icons/Filter1';
 import { TextField } from '@material-ui/core';
+// import { DatePicker } from 'material-ui/DatePicker';
+// import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+// import getMuiTheme from 'material-ui/styles/getMuiTheme'
+// import {moment } from 'moment';
 
 const validate = values => {
     const errors = {}
@@ -39,14 +43,22 @@ const renderTextField = ({
 />)
 // const renderDateField = ({ label, input }) => (<div><DatePicker label={label} {...input} /></div>)
 
-const renderDatePicker = () => (
-    
-        <div>
-            <label> Date of Filing </label>
-            <div>   <DatePickerComponent   /> </div>
-        </div>
+// const renderDatePicker = () => (
 
-);
+//         <div>
+//             <label> Date of Filing </label>
+//             <div>   <DatePickerComponent   /> </div>
+//         </div>
+
+// );{...input} 
+
+
+// {touched && error && <span className="error_field">{error}</span>}
+
+
+
+
+
 
 
 
@@ -64,9 +76,7 @@ const WizardFormSecondPage = props => {
                 <KxCard className="flex-KxCard-page-2">
 
                     <div className="flex-form-content-and-button">
-                        {/* <Field name="email" type="email" component={renderField} label="Email" />*/}
-                        {/* <div className="previous">  
-                        </PrevButton> </div>*/}            <div> <p className="heading2">Expense Details <span id="icon"> <Filter1Icon /></span></p></div>
+                        <div> <p className="heading2">Expense Details <span id="icon"> <Filter1Icon /></span></p></div>
 
 
 
@@ -82,7 +92,17 @@ const WizardFormSecondPage = props => {
                             label="Voucher No."
                         />
 
-                        <Field name="date" component={renderDatePicker} />
+                        <div className="datepicker-container" > <Field
+                            name={'dateOfFiling'}
+                            component={DatePicker}
+                            placeholder="Date of Filing"
+                            
+                            parse={normalizeDates}
+                            format={formatDates}
+                        /></div>
+
+
+
                         {/* <Field name="date" component={renderDateField} label="Date of Filing" /> */}
                         {/* <label> */}
                         {/* <Field name="sex" component="input" type="radio" value="male" />{' '} */}
