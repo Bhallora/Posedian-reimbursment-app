@@ -9,6 +9,7 @@ import KxCard from '../../card/card';
 import { TextField } from '@material-ui/core';
 
 
+
 const validate = values => {
   const errors = {}
   const requiredFields = [
@@ -60,15 +61,18 @@ const WizardFormFirstPage = props => {
         <KxCard className="flex-KxCard-page-1">
           <div className="flex-form-content-and-button">
             <div> <p className="heading1">Basic Information </p></div>
-            <div>
-              <Field
-                name="name"
-                component={renderTextField}
-                label="Name"
-              />
-            </div>
-            <div>
-              <Field name="employeeCode" component={renderTextField} label="Employee Code" />
+            <div className="flex-form-content">
+              <div>
+                <Field
+                  name="name"
+                  component={renderTextField}
+                  label="Name"
+                />
+              </div>
+
+              <div>
+                <Field name="employeeCode" component={renderTextField} label="Employee Code" />
+              </div>
             </div>
 
 

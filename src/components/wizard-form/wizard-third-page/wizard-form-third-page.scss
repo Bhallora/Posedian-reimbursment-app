@@ -29,11 +29,20 @@
     margin-bottom:40px;
     //font-family: 'Gayathri';
     //color:#1a293e;
-    color:black;
+    color:whitesmoke;
     font-size: 35px;
    // font-weight:bold;
     margin-left: 0%;
     font-family: 'Arsenal', sans-serif ;
+    background-image: url('../image/tag.png');
+    background-size: 400px 200px;
+    background-repeat: no-repeat;
+    clip-path: inset(0% 0%  10% 0% round  25px  0px );
+   padding-top :10px;
+   padding-left:30px;
+   padding-right:30px;
+   padding-bottom:20px;
+   
 
    
 }
