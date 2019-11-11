@@ -2,12 +2,14 @@
     display: flex;
   
     
-    
+    // background-image: url("../wizard-form/image/Background.jpg");
     justify-content: center;
     margin-top:8.5%;
     max-width:100%;
     max-height:100%;
     flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
     
     
 }
