@@ -3,7 +3,7 @@ import TextBox from '../text-box/TextBox';
 //import SaveButton from '../save-button/SaveButton';
 
 import './basic-info.scss';
-import { employee } from '../../dummy-data-object/dummy-data-object';
+import { employee1 } from '../../data-object/data-object';
 
 
 //import NameTag from '../name-tag/NameTag';
@@ -21,7 +21,7 @@ export default function BasicInfo() {
 
             {/* <div className='flex-basic-info-button'> */}
 
-                {/* <SaveButton /> */}
+            {/* <SaveButton /> */}
             {/* </div> */}
 
         </div>
@@ -30,23 +30,23 @@ export default function BasicInfo() {
     );
 }
 
-export function EditInfo() {
+{/*export function EditInfo() {
     return (<div>
 
-        <div className="flex-basic-info-form">
+        // <div className="flex-basic-info-form">
 
             <div className="flex-basic-info">
 
-                <TextBox name='Name' input={employee.name} />
-                <TextBox name='Employee ID' input={employee.employeeCode} /> </div>
+                <TextBox name='Name' input={employee1.name} />
+                <TextBox name='Employee ID' input={employee1.employeeCode} /> </div>
 
             {/* <div className='flex-basic-info-button'> */}
 
-                {/* <SaveButton /> */}
-            {/* </div> */}
+{/* <SaveButton /> */ }
+{/* </div> */ }
 
-        </div>
-    </div>
+     //   </div>
+    //</div>
 
-    );
-}
+   // );
+//}

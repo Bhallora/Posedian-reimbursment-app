@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 export default function NextButton(props) {
     const classes = useStyles();
     return (
-        <Button onClick={props.onClick} variant='contained' color='default' size="small" className={classes.button}>Next<NavigateNext className={clsx(classes.rightIcon, classes.iconSmall)} />
+        <Button variant='contained' type="submit" color='default' size="small" className={classes.button}>{props.label}<NavigateNext className={clsx(classes.rightIcon, classes.iconSmall)} />
         </Button>
     );
 }

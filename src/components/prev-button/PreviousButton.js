@@ -30,7 +30,8 @@ export default function PrevButton(props) {
     const classes = useStyles();
     return (
         <div>
-            <Button onClick={props.onClick} variant='contained' color='default' size="small" className={classes.button}><NavigateBefore className={clsx(classes.leftIcon, classes.iconSmall)} /> Prev
+            <Button onClick={props.onClick} variant='contained' color='default' size="small" className={classes.button}
+            ><NavigateBefore className={clsx(classes.leftIcon, classes.iconSmall)} /> Prev
             </Button>
         </div>
     );

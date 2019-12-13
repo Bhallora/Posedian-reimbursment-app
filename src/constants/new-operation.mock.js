@@ -1,1 +1,3 @@
-export const operation = {}
+export const operation = {
+    testProp: 'hello'
+}

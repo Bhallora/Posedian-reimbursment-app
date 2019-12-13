@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DropzoneArea } from 'material-ui-dropzone'
+import { DropzoneArea } from 'material-ui-dropzone/dist'
 
 
 

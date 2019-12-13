@@ -13,6 +13,10 @@ import NewEntry from '../../components/new-entry-page/new-entry-page'
 //import SimpleCard1 from '../../components/card-table/CardTable';
 import ApplicationsView from '../../components/applications-view/ApplicationsView';
 import ApplicationView from '../../components/application-view/ApplicationView';
+import { createApplication } from '../../actions/create-application.action';
+import WizardForm from '../../components/wizard-form/wizard-complete-form/wizard-complete-form'
+import { formReducer } from 'redux-form'
+import showResults from '../../components/wizard-form/show-results/showResults';
 
 
 
@@ -35,8 +39,9 @@ class App extends Component {
             <Main page={this.props.page} toggleSideNav={this.props.toggleSideNav}>
               <Route exact path="/" component={Home} />
 
-              <Route path="/new-entry" component={NewEntry} />
-              <Route path="/view-applications" component={ViewApplication} />
+              <Route path="/new-entry" render={() => <WizardForm /*{...props} createApplication={this.props.createApplication}*/ onSubmit={showResults} />} />
+
+              <Route path="/view-applications" render={(props) => <ViewApplication {...props} applications={this.props.applications} />} />
               {/* <Route path='/components/card-table/CardTable' component={SimpleCard1} />*/}
 
             </Main>
@@ -48,6 +53,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  page: state.page
+  page: state.page,
+  applications: state.applications
 })
-export default connect(mapStateToProps, { toggleSideNav })(App);
+export default connect(mapStateToProps, { toggleSideNav, createApplication })(App);

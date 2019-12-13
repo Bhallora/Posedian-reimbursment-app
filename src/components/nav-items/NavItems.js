@@ -18,7 +18,7 @@ class NavItems extends Component {
 
                             <li className="kx-tree__link__txt__list">  <Home></Home> <NavLink exact to='/' className="kx-tree__link__txt" >Home</NavLink></li>
                             <li className="kx-tree__link__txt__list">  <Visibility></Visibility> <NavLink to='/view-applications' className="kx-tree__link__txt">View Applications</NavLink></li>
-                            
+
                             <li className="kx-tree__link__txt__list">  <Create></Create> <NavLink to="/new-entry" className="kx-tree__link__txt">New Entry</NavLink></li>
                             <li className="kx-tree__link__txt__list">  <ExitToApp></ExitToApp><span className="kx-tree__link__txt" > Log out</span></li>
                         </ul>

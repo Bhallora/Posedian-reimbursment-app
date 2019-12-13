@@ -12,6 +12,7 @@ import './new-entry-page.scss';
 import { EditInfo } from '../basic-info/BasicInfo';
 import SaveButton from '../save-button/SaveButton';
 import SubmitButton from '../submit-button/SubmitButton';
+import { createApplication } from '../../actions/create-application.action';
 
 class NewEntry extends React.Component {
     constructor(props) {
@@ -30,12 +31,12 @@ class NewEntry extends React.Component {
         this.setState({ step: this.state.step - 1 });
     }
     handleClick = () => {
-
         this.setState({ counter: this.state.counter + 1 });
     }
 
 
     render() {
+
         //  const employee = {
         //  basicInfo: {
 
@@ -47,8 +48,8 @@ class NewEntry extends React.Component {
                 case 1:
                     if (this.state.counter % 2 !== 0)
                         return (<BasicInfo />);
-                    else
-                        return (<EditInfo />);
+                //   else
+                //   return (<EditInfo />);
 
 
 
@@ -82,7 +83,7 @@ class NewEntry extends React.Component {
         if (this.state.step === 3) {
             return (
 
-                <form className="display1">
+                <div className="display1">
 
                     <KxCard>
                         <div id='new-entry-page-name-tag'>
@@ -90,9 +91,9 @@ class NewEntry extends React.Component {
                         </div>
                         {getStepComponent(this.state.step)}
                         <div className='new-entry-page-buttons'>
-                        <PrevButton onClick={this.handleDecrement} />
-                        <SaveButton/>
-                        <SubmitButton/>
+                            <PrevButton onClick={this.handleDecrement} />
+                            <SaveButton />
+                            <SubmitButton onClick={() => this.props.createApplication({ test: 'hello' })} />
                         </div>
                     </KxCard>
 
@@ -101,13 +102,13 @@ class NewEntry extends React.Component {
 
 
 
-                </form>);
+                </div>);
         }
         if (this.state.step === 1) {
             return (
 
 
-                <form className="display1">
+                <div className="display1">
 
                     <KxCard>
                         <div id='new-entry-page-name-tag'>
@@ -120,18 +121,18 @@ class NewEntry extends React.Component {
 
                         {getStepComponent(this.state.step)}
                         <div className='new-entry-page-buttons'>
-                        <SaveButton/>
-                        <NextButton onClick={this.handleIncrement} />
+                            <SaveButton />
+                            <NextButton onClick={this.handleIncrement} />
                         </div>
                         {/* <EditButton onClick={this.handleClick} /> */}
 
                     </KxCard>
-                </form>
+                </div>
             );
         }
         else return (
 
-            <form className="display1">
+            <div className="display1">
 
                 <KxCard className='kx-card'>
                     <div id='new-entry-page-name-tag'>
@@ -141,11 +142,11 @@ class NewEntry extends React.Component {
                     <div className='new-entry-page-buttons'>
                         <PrevButton onClick={this.handleDecrement} />
                         {/* <EditButton onClick={this.showEdit} /> */}
-                        <SaveButton/>
+                        <SaveButton />
                         <NextButton onClick={this.handleIncrement} />
                     </div>
                 </KxCard>
-            </form>);
+            </div>);
 
 
 

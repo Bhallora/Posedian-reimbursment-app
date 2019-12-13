@@ -1,24 +1,59 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import EditButton from '../edit-button/EditButton';
-import { employee } from '../../dummy-data-object/dummy-data-object';
+import { employees, employee1 } from '../../data-object/data-object';
 import TextBox from '../text-box/TextBox';
+import './application-view.scss';
+import { fetchPost } from "../../actions/fetch-post.action";
+import image from '../../data-object/hotel-bill-format-in-india-7.jpg';
+import { connect } from 'react-redux';
 //import KxCard from '../card/card';
 //import { DatePicker } from '../../../node_modules/@material-ui/pickers/DatePicker/DatePicker';
-function ApplicationView() {
+class ApplicationView extends React.Component {
+    // componentDidMount() {
+    // this.props.fetchPost()
+    // }
+    render() {
+        return (
 
-    return (
-        <div className="flex-application-container">
+            <div className="flex-application-container-noneditable">
 
-            <h1 className="flex-application-summary-header"> Application Summary </h1>
-            <TextBox name="Name" input={employee.name} />
-            <TextBox name="Employee ID" input={employee.employeeCode} />
-            <TextBox name="Voucher No." input={employee.voucherNo} />
-            <TextBox name="Date" input={employee.date} />
-            <img src={employee.imgSrc} />
-            <EditButton />
+                <h1 className="flex-application-summary-header"> Application Summary </h1>
+                {/* {this.props.error && <p>{this.props.error}</p>} */}
 
-        </div>
+                {/* <TextBox disabled label="Name" input={this.props.data || this.props.data.name} />
+                <TextBox disabled label="Employee Code" input={this.props.data.employeeCode} />
+                <TextBox disabled label="Voucher No." input={this.props.data.voucherNo} />
+                <TextBox disabled label="Date of filing" input={this.props.data.date} />
+                <TextBox disabled label="Department" input={this.props.data.department} />
+                <TextBox disabled label="Division" input={this.props.data.division} />
+                <TextBox disabled label="Expense Date" input={this.props.data.expenseDate} />
+                <TextBox disabled label="Expense Date" input={this.props.data.expenseDetail} />
+                <TextBox disabled label="Expense Amount" input={this.props.data.amount} /> */}
+                <TextBox disabled label="Name" input={employees[0].name} />
+                <TextBox disabled label="Employee Code" input={employees[0].employeeCode} />
+                <TextBox disabled label="Voucher No." input={employees[0].voucherNo} />
+                <TextBox disabled label="Date of filing" input={employees[0].date} />
+                <TextBox disabled label="Department" input={employees[0].department} />
+                <TextBox disabled label="Division" input={employees[0].division} />
+                <TextBox disabled label="Expense Date" input={employees[0].expenseDate} />
+                <TextBox disabled label="Expense Date" input={employees[0].expenseDetail} />
+                <TextBox disabled label="Expense Amount" input={employees[0].amount} />
 
-    )
+
+                <img src={image} width="500px" height="780px" label="Bill Image" />
+
+                <EditButton />
+
+            </div>
+
+        )
+    }
 }
-export default ApplicationView;
+
+const mapStatetoProps = (state) => {
+    return { data: state.data, error: state.error }
+}
+const mapDispatchprops = (dispatch) => {
+    return { onFETCH_POST: () => dispatch(fetchPost()) }
+}
+export default connect(mapStatetoProps, mapDispatchprops)(ApplicationView);

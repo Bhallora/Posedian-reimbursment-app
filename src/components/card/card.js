@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import TextBox from '../text-box/TextBox';
 import './card.scss';
 import { bgcolor } from '@material-ui/system';
-import { NavLink, HashRouter } from 'react-router-dom';
+//import { NavLink, HashRouter } from 'C:/Users/pallab/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react-router-dom';
 import PreviousButton from '../prev-button/PreviousButton';
 
 
